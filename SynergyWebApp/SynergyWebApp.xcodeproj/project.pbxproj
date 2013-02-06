@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74465FAF16C22D210081EC85 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9316C22D210081EC85 /* NSData+Base64.m */; };
+		74465FB016C22D210081EC85 /* NSMutableArray+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9516C22D210081EC85 /* NSMutableArray+Soap.m */; };
+		74465FB116C22D210081EC85 /* Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9716C22D210081EC85 /* Soap.m */; };
+		74465FB216C22D210081EC85 /* SoapArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9916C22D210081EC85 /* SoapArray.m */; };
+		74465FB316C22D210081EC85 /* SoapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9C16C22D210081EC85 /* SoapDictionary.m */; };
+		74465FB416C22D210081EC85 /* SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465F9E16C22D210081EC85 /* SoapFault.m */; };
+		74465FB516C22D210081EC85 /* SoapHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FA016C22D210081EC85 /* SoapHandler.m */; };
+		74465FB616C22D210081EC85 /* SoapLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FA216C22D210081EC85 /* SoapLiteral.m */; };
+		74465FB716C22D210081EC85 /* SoapNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FA416C22D210081EC85 /* SoapNil.m */; };
+		74465FB816C22D210081EC85 /* SoapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FA616C22D210081EC85 /* SoapObject.m */; };
+		74465FB916C22D210081EC85 /* SoapParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FA816C22D210081EC85 /* SoapParameter.m */; };
+		74465FBA16C22D210081EC85 /* SoapReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FAA16C22D210081EC85 /* SoapReachability.m */; };
+		74465FBB16C22D210081EC85 /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FAC16C22D210081EC85 /* SoapRequest.m */; };
+		74465FBC16C22D210081EC85 /* SoapService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FAE16C22D210081EC85 /* SoapService.m */; };
+		74465FCB16C22D560081EC85 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FBF16C22D560081EC85 /* CXMLDocument.m */; };
+		74465FCC16C22D560081EC85 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FC116C22D560081EC85 /* CXMLDocument_PrivateExtensions.m */; };
+		74465FCD16C22D560081EC85 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FC316C22D560081EC85 /* CXMLElement.m */; };
+		74465FCE16C22D560081EC85 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FC516C22D560081EC85 /* CXMLNode.m */; };
+		74465FCF16C22D560081EC85 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FC716C22D560081EC85 /* CXMLNode_PrivateExtensions.m */; };
+		74465FD016C22D560081EC85 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74465FC916C22D560081EC85 /* CXMLNode_XPathExtensions.m */; };
+		74465FD216C22D880081EC85 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74465FD116C22D880081EC85 /* libxml2.2.dylib */; };
+		7446601F16C22EEC0081EC85 /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7446600916C22EEC0081EC85 /* Soap+Prefix.m */; };
+		7446602516C22F760081EC85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7446602416C22F760081EC85 /* SystemConfiguration.framework */; };
 		7493D8FC16C22B0300DAE363 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FB16C22B0300DAE363 /* UIKit.framework */; };
 		7493D8FE16C22B0300DAE363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FD16C22B0300DAE363 /* Foundation.framework */; };
 		7493D90016C22B0300DAE363 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */; };
@@ -20,6 +43,52 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74465F9216C22D210081EC85 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		74465F9316C22D210081EC85 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		74465F9416C22D210081EC85 /* NSMutableArray+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Soap.h"; sourceTree = "<group>"; };
+		74465F9516C22D210081EC85 /* NSMutableArray+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Soap.m"; sourceTree = "<group>"; };
+		74465F9616C22D210081EC85 /* Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soap.h; sourceTree = "<group>"; };
+		74465F9716C22D210081EC85 /* Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soap.m; sourceTree = "<group>"; };
+		74465F9816C22D210081EC85 /* SoapArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArray.h; sourceTree = "<group>"; };
+		74465F9916C22D210081EC85 /* SoapArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArray.m; sourceTree = "<group>"; };
+		74465F9A16C22D210081EC85 /* SoapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDelegate.h; sourceTree = "<group>"; };
+		74465F9B16C22D210081EC85 /* SoapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDictionary.h; sourceTree = "<group>"; };
+		74465F9C16C22D210081EC85 /* SoapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDictionary.m; sourceTree = "<group>"; };
+		74465F9D16C22D210081EC85 /* SoapFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapFault.h; sourceTree = "<group>"; };
+		74465F9E16C22D210081EC85 /* SoapFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapFault.m; sourceTree = "<group>"; };
+		74465F9F16C22D210081EC85 /* SoapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapHandler.h; sourceTree = "<group>"; };
+		74465FA016C22D210081EC85 /* SoapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapHandler.m; sourceTree = "<group>"; };
+		74465FA116C22D210081EC85 /* SoapLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapLiteral.h; sourceTree = "<group>"; };
+		74465FA216C22D210081EC85 /* SoapLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapLiteral.m; sourceTree = "<group>"; };
+		74465FA316C22D210081EC85 /* SoapNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapNil.h; sourceTree = "<group>"; };
+		74465FA416C22D210081EC85 /* SoapNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapNil.m; sourceTree = "<group>"; };
+		74465FA516C22D210081EC85 /* SoapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapObject.h; sourceTree = "<group>"; };
+		74465FA616C22D210081EC85 /* SoapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapObject.m; sourceTree = "<group>"; };
+		74465FA716C22D210081EC85 /* SoapParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapParameter.h; sourceTree = "<group>"; };
+		74465FA816C22D210081EC85 /* SoapParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapParameter.m; sourceTree = "<group>"; };
+		74465FA916C22D210081EC85 /* SoapReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapReachability.h; sourceTree = "<group>"; };
+		74465FAA16C22D210081EC85 /* SoapReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapReachability.m; sourceTree = "<group>"; };
+		74465FAB16C22D210081EC85 /* SoapRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequest.h; sourceTree = "<group>"; };
+		74465FAC16C22D210081EC85 /* SoapRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequest.m; sourceTree = "<group>"; };
+		74465FAD16C22D210081EC85 /* SoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapService.h; sourceTree = "<group>"; };
+		74465FAE16C22D210081EC85 /* SoapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapService.m; sourceTree = "<group>"; };
+		74465FBE16C22D560081EC85 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		74465FBF16C22D560081EC85 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		74465FC016C22D560081EC85 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		74465FC116C22D560081EC85 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		74465FC216C22D560081EC85 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		74465FC316C22D560081EC85 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		74465FC416C22D560081EC85 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		74465FC516C22D560081EC85 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		74465FC616C22D560081EC85 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		74465FC716C22D560081EC85 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		74465FC816C22D560081EC85 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		74465FC916C22D560081EC85 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		74465FCA16C22D560081EC85 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		74465FD116C22D880081EC85 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		7446600816C22EEB0081EC85 /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
+		7446600916C22EEC0081EC85 /* Soap+Prefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Soap+Prefix.m"; sourceTree = "<group>"; };
+		7446602416C22F760081EC85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7493D8F716C22B0300DAE363 /* SynergyWebApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynergyWebApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7493D8FB16C22B0300DAE363 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7493D8FD16C22B0300DAE363 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7446602516C22F760081EC85 /* SystemConfiguration.framework in Frameworks */,
+				74465FD216C22D880081EC85 /* libxml2.2.dylib in Frameworks */,
 				7493D8FC16C22B0300DAE363 /* UIKit.framework in Frameworks */,
 				7493D8FE16C22B0300DAE363 /* Foundation.framework in Frameworks */,
 				7493D90016C22B0300DAE363 /* CoreGraphics.framework in Frameworks */,
@@ -52,9 +123,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74465F8D16C22C530081EC85 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				74465F9016C22CE80081EC85 /* private */,
+				74465F8F16C22CE50081EC85 /* public */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		74465F8F16C22CE50081EC85 /* public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = public;
+			sourceTree = "<group>";
+		};
+		74465F9016C22CE80081EC85 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				74465FBD16C22D560081EC85 /* TouchXML */,
+				74465F9116C22D210081EC85 /* Soap */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		74465F9116C22D210081EC85 /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				7446600816C22EEB0081EC85 /* Soap+Prefix.h */,
+				7446600916C22EEC0081EC85 /* Soap+Prefix.m */,
+				74465F9216C22D210081EC85 /* NSData+Base64.h */,
+				74465F9316C22D210081EC85 /* NSData+Base64.m */,
+				74465F9416C22D210081EC85 /* NSMutableArray+Soap.h */,
+				74465F9516C22D210081EC85 /* NSMutableArray+Soap.m */,
+				74465F9616C22D210081EC85 /* Soap.h */,
+				74465F9716C22D210081EC85 /* Soap.m */,
+				74465F9816C22D210081EC85 /* SoapArray.h */,
+				74465F9916C22D210081EC85 /* SoapArray.m */,
+				74465F9A16C22D210081EC85 /* SoapDelegate.h */,
+				74465F9B16C22D210081EC85 /* SoapDictionary.h */,
+				74465F9C16C22D210081EC85 /* SoapDictionary.m */,
+				74465F9D16C22D210081EC85 /* SoapFault.h */,
+				74465F9E16C22D210081EC85 /* SoapFault.m */,
+				74465F9F16C22D210081EC85 /* SoapHandler.h */,
+				74465FA016C22D210081EC85 /* SoapHandler.m */,
+				74465FA116C22D210081EC85 /* SoapLiteral.h */,
+				74465FA216C22D210081EC85 /* SoapLiteral.m */,
+				74465FA316C22D210081EC85 /* SoapNil.h */,
+				74465FA416C22D210081EC85 /* SoapNil.m */,
+				74465FA516C22D210081EC85 /* SoapObject.h */,
+				74465FA616C22D210081EC85 /* SoapObject.m */,
+				74465FA716C22D210081EC85 /* SoapParameter.h */,
+				74465FA816C22D210081EC85 /* SoapParameter.m */,
+				74465FA916C22D210081EC85 /* SoapReachability.h */,
+				74465FAA16C22D210081EC85 /* SoapReachability.m */,
+				74465FAB16C22D210081EC85 /* SoapRequest.h */,
+				74465FAC16C22D210081EC85 /* SoapRequest.m */,
+				74465FAD16C22D210081EC85 /* SoapService.h */,
+				74465FAE16C22D210081EC85 /* SoapService.m */,
+			);
+			name = Soap;
+			path = SynergyWebApp/Protocol/private/Soap;
+			sourceTree = "<group>";
+		};
+		74465FBD16C22D560081EC85 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				74465FBE16C22D560081EC85 /* CXMLDocument.h */,
+				74465FBF16C22D560081EC85 /* CXMLDocument.m */,
+				74465FC016C22D560081EC85 /* CXMLDocument_PrivateExtensions.h */,
+				74465FC116C22D560081EC85 /* CXMLDocument_PrivateExtensions.m */,
+				74465FC216C22D560081EC85 /* CXMLElement.h */,
+				74465FC316C22D560081EC85 /* CXMLElement.m */,
+				74465FC416C22D560081EC85 /* CXMLNode.h */,
+				74465FC516C22D560081EC85 /* CXMLNode.m */,
+				74465FC616C22D560081EC85 /* CXMLNode_PrivateExtensions.h */,
+				74465FC716C22D560081EC85 /* CXMLNode_PrivateExtensions.m */,
+				74465FC816C22D560081EC85 /* CXMLNode_XPathExtensions.h */,
+				74465FC916C22D560081EC85 /* CXMLNode_XPathExtensions.m */,
+				74465FCA16C22D560081EC85 /* TouchXML.h */,
+			);
+			name = TouchXML;
+			path = SynergyWebApp/Protocol/private/TouchXML;
+			sourceTree = "<group>";
+		};
 		7493D8EC16C22B0300DAE363 = {
 			isa = PBXGroup;
 			children = (
+				7446602416C22F760081EC85 /* SystemConfiguration.framework */,
+				74465F8D16C22C530081EC85 /* Protocol */,
 				7493D90116C22B0300DAE363 /* SynergyWebApp */,
 				7493D8FA16C22B0300DAE363 /* Frameworks */,
 				7493D8F816C22B0300DAE363 /* Products */,
@@ -72,6 +230,7 @@
 		7493D8FA16C22B0300DAE363 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74465FD116C22D880081EC85 /* libxml2.2.dylib */,
 				7493D8FB16C22B0300DAE363 /* UIKit.framework */,
 				7493D8FD16C22B0300DAE363 /* Foundation.framework */,
 				7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */,
@@ -173,6 +332,27 @@
 				7493D90C16C22B0300DAE363 /* AppDelegate.m in Sources */,
 				7493D90F16C22B0300DAE363 /* MasterViewController.m in Sources */,
 				7493D91216C22B0300DAE363 /* DetailViewController.m in Sources */,
+				74465FAF16C22D210081EC85 /* NSData+Base64.m in Sources */,
+				74465FB016C22D210081EC85 /* NSMutableArray+Soap.m in Sources */,
+				74465FB116C22D210081EC85 /* Soap.m in Sources */,
+				74465FB216C22D210081EC85 /* SoapArray.m in Sources */,
+				74465FB316C22D210081EC85 /* SoapDictionary.m in Sources */,
+				74465FB416C22D210081EC85 /* SoapFault.m in Sources */,
+				74465FB516C22D210081EC85 /* SoapHandler.m in Sources */,
+				74465FB616C22D210081EC85 /* SoapLiteral.m in Sources */,
+				74465FB716C22D210081EC85 /* SoapNil.m in Sources */,
+				74465FB816C22D210081EC85 /* SoapObject.m in Sources */,
+				74465FB916C22D210081EC85 /* SoapParameter.m in Sources */,
+				74465FBA16C22D210081EC85 /* SoapReachability.m in Sources */,
+				74465FBB16C22D210081EC85 /* SoapRequest.m in Sources */,
+				74465FBC16C22D210081EC85 /* SoapService.m in Sources */,
+				74465FCB16C22D560081EC85 /* CXMLDocument.m in Sources */,
+				74465FCC16C22D560081EC85 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				74465FCD16C22D560081EC85 /* CXMLElement.m in Sources */,
+				74465FCE16C22D560081EC85 /* CXMLNode.m in Sources */,
+				74465FCF16C22D560081EC85 /* CXMLNode_PrivateExtensions.m in Sources */,
+				74465FD016C22D560081EC85 /* CXMLNode_XPathExtensions.m in Sources */,
+				7446601F16C22EEC0081EC85 /* Soap+Prefix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +436,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SynergyWebApp/SynergyWebApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "SynergyWebApp/SynergyWebApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -267,6 +448,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SynergyWebApp/SynergyWebApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "SynergyWebApp/SynergyWebApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -292,6 +474,7 @@
 				7493D91D16C22B0300DAE363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
