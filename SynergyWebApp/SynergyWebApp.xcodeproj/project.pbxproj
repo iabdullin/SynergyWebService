@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7493D8FC16C22B0300DAE363 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FB16C22B0300DAE363 /* UIKit.framework */; };
+		7493D8FE16C22B0300DAE363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FD16C22B0300DAE363 /* Foundation.framework */; };
+		7493D90016C22B0300DAE363 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */; };
+		7493D90616C22B0300DAE363 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7493D90416C22B0300DAE363 /* InfoPlist.strings */; };
+		7493D90816C22B0300DAE363 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493D90716C22B0300DAE363 /* main.m */; };
+		7493D90C16C22B0300DAE363 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493D90B16C22B0300DAE363 /* AppDelegate.m */; };
+		7493D90F16C22B0300DAE363 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493D90E16C22B0300DAE363 /* MasterViewController.m */; };
+		7493D91216C22B0300DAE363 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493D91116C22B0300DAE363 /* DetailViewController.m */; };
+		7493D91516C22B0300DAE363 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7493D91316C22B0300DAE363 /* MasterViewController.xib */; };
+		7493D91816C22B0300DAE363 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7493D91616C22B0300DAE363 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7493D8F716C22B0300DAE363 /* SynergyWebApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynergyWebApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7493D8FB16C22B0300DAE363 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7493D8FD16C22B0300DAE363 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7493D90316C22B0300DAE363 /* SynergyWebApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SynergyWebApp-Info.plist"; sourceTree = "<group>"; };
+		7493D90516C22B0300DAE363 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7493D90716C22B0300DAE363 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7493D90916C22B0300DAE363 /* SynergyWebApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SynergyWebApp-Prefix.pch"; sourceTree = "<group>"; };
+		7493D90A16C22B0300DAE363 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7493D90B16C22B0300DAE363 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7493D90D16C22B0300DAE363 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		7493D90E16C22B0300DAE363 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		7493D91016C22B0300DAE363 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7493D91116C22B0300DAE363 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7493D91416C22B0300DAE363 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		7493D91716C22B0300DAE363 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7493D8F416C22B0300DAE363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7493D8FC16C22B0300DAE363 /* UIKit.framework in Frameworks */,
+				7493D8FE16C22B0300DAE363 /* Foundation.framework in Frameworks */,
+				7493D90016C22B0300DAE363 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7493D8EC16C22B0300DAE363 = {
+			isa = PBXGroup;
+			children = (
+				7493D90116C22B0300DAE363 /* SynergyWebApp */,
+				7493D8FA16C22B0300DAE363 /* Frameworks */,
+				7493D8F816C22B0300DAE363 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7493D8F816C22B0300DAE363 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7493D8F716C22B0300DAE363 /* SynergyWebApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7493D8FA16C22B0300DAE363 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7493D8FB16C22B0300DAE363 /* UIKit.framework */,
+				7493D8FD16C22B0300DAE363 /* Foundation.framework */,
+				7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7493D90116C22B0300DAE363 /* SynergyWebApp */ = {
+			isa = PBXGroup;
+			children = (
+				7493D90A16C22B0300DAE363 /* AppDelegate.h */,
+				7493D90B16C22B0300DAE363 /* AppDelegate.m */,
+				7493D90D16C22B0300DAE363 /* MasterViewController.h */,
+				7493D90E16C22B0300DAE363 /* MasterViewController.m */,
+				7493D91016C22B0300DAE363 /* DetailViewController.h */,
+				7493D91116C22B0300DAE363 /* DetailViewController.m */,
+				7493D91316C22B0300DAE363 /* MasterViewController.xib */,
+				7493D91616C22B0300DAE363 /* DetailViewController.xib */,
+				7493D90216C22B0300DAE363 /* Supporting Files */,
+			);
+			path = SynergyWebApp;
+			sourceTree = "<group>";
+		};
+		7493D90216C22B0300DAE363 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7493D90316C22B0300DAE363 /* SynergyWebApp-Info.plist */,
+				7493D90416C22B0300DAE363 /* InfoPlist.strings */,
+				7493D90716C22B0300DAE363 /* main.m */,
+				7493D90916C22B0300DAE363 /* SynergyWebApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7493D8F616C22B0300DAE363 /* SynergyWebApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7493D91B16C22B0300DAE363 /* Build configuration list for PBXNativeTarget "SynergyWebApp" */;
+			buildPhases = (
+				7493D8F316C22B0300DAE363 /* Sources */,
+				7493D8F416C22B0300DAE363 /* Frameworks */,
+				7493D8F516C22B0300DAE363 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SynergyWebApp;
+			productName = SynergyWebApp;
+			productReference = 7493D8F716C22B0300DAE363 /* SynergyWebApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7493D8EE16C22B0300DAE363 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7493D8F116C22B0300DAE363 /* Build configuration list for PBXProject "SynergyWebApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7493D8EC16C22B0300DAE363;
+			productRefGroup = 7493D8F816C22B0300DAE363 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7493D8F616C22B0300DAE363 /* SynergyWebApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7493D8F516C22B0300DAE363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7493D90616C22B0300DAE363 /* InfoPlist.strings in Resources */,
+				7493D91516C22B0300DAE363 /* MasterViewController.xib in Resources */,
+				7493D91816C22B0300DAE363 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7493D8F316C22B0300DAE363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7493D90816C22B0300DAE363 /* main.m in Sources */,
+				7493D90C16C22B0300DAE363 /* AppDelegate.m in Sources */,
+				7493D90F16C22B0300DAE363 /* MasterViewController.m in Sources */,
+				7493D91216C22B0300DAE363 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7493D90416C22B0300DAE363 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7493D90516C22B0300DAE363 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7493D91316C22B0300DAE363 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7493D91416C22B0300DAE363 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		7493D91616C22B0300DAE363 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7493D91716C22B0300DAE363 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7493D91916C22B0300DAE363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7493D91A16C22B0300DAE363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7493D91C16C22B0300DAE363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynergyWebApp/SynergyWebApp-Prefix.pch";
+				INFOPLIST_FILE = "SynergyWebApp/SynergyWebApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7493D91D16C22B0300DAE363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynergyWebApp/SynergyWebApp-Prefix.pch";
+				INFOPLIST_FILE = "SynergyWebApp/SynergyWebApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7493D8F116C22B0300DAE363 /* Build configuration list for PBXProject "SynergyWebApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7493D91916C22B0300DAE363 /* Debug */,
+				7493D91A16C22B0300DAE363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7493D91B16C22B0300DAE363 /* Build configuration list for PBXNativeTarget "SynergyWebApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7493D91C16C22B0300DAE363 /* Debug */,
+				7493D91D16C22B0300DAE363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7493D8EE16C22B0300DAE363 /* Project object */;
+}
