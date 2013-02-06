@@ -30,6 +30,9 @@
 		74465FD216C22D880081EC85 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74465FD116C22D880081EC85 /* libxml2.2.dylib */; };
 		7446601F16C22EEC0081EC85 /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7446600916C22EEC0081EC85 /* Soap+Prefix.m */; };
 		7446602516C22F760081EC85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7446602416C22F760081EC85 /* SystemConfiguration.framework */; };
+		7446602816C230680081EC85 /* RSSynergyWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7446602716C230680081EC85 /* RSSynergyWebService.m */; };
+		7446602B16C231A60081EC85 /* RSSynergyReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 7446602A16C231A60081EC85 /* RSSynergyReply.m */; };
+		7446602F16C236330081EC85 /* RSWebServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7446602E16C236330081EC85 /* RSWebServiceHandler.m */; };
 		7493D8FC16C22B0300DAE363 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FB16C22B0300DAE363 /* UIKit.framework */; };
 		7493D8FE16C22B0300DAE363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FD16C22B0300DAE363 /* Foundation.framework */; };
 		7493D90016C22B0300DAE363 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7493D8FF16C22B0300DAE363 /* CoreGraphics.framework */; };
@@ -89,6 +92,12 @@
 		7446600816C22EEB0081EC85 /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
 		7446600916C22EEC0081EC85 /* Soap+Prefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Soap+Prefix.m"; sourceTree = "<group>"; };
 		7446602416C22F760081EC85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7446602616C230680081EC85 /* RSSynergyWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSynergyWebService.h; path = SynergyWebApp/Protocol/public/RSSynergyWebService.h; sourceTree = "<group>"; };
+		7446602716C230680081EC85 /* RSSynergyWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSynergyWebService.m; path = SynergyWebApp/Protocol/public/RSSynergyWebService.m; sourceTree = "<group>"; };
+		7446602916C231A60081EC85 /* RSSynergyReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSynergyReply.h; path = SynergyWebApp/Protocol/public/RSSynergyReply.h; sourceTree = "<group>"; };
+		7446602A16C231A60081EC85 /* RSSynergyReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSynergyReply.m; path = SynergyWebApp/Protocol/public/RSSynergyReply.m; sourceTree = "<group>"; };
+		7446602D16C236330081EC85 /* RSWebServiceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSWebServiceHandler.h; path = SynergyWebApp/Protocol/private/WebServiceHandlers/RSWebServiceHandler.h; sourceTree = "<group>"; };
+		7446602E16C236330081EC85 /* RSWebServiceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSWebServiceHandler.m; path = SynergyWebApp/Protocol/private/WebServiceHandlers/RSWebServiceHandler.m; sourceTree = "<group>"; };
 		7493D8F716C22B0300DAE363 /* SynergyWebApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynergyWebApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7493D8FB16C22B0300DAE363 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7493D8FD16C22B0300DAE363 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +144,10 @@
 		74465F8F16C22CE50081EC85 /* public */ = {
 			isa = PBXGroup;
 			children = (
+				7446602616C230680081EC85 /* RSSynergyWebService.h */,
+				7446602716C230680081EC85 /* RSSynergyWebService.m */,
+				7446602916C231A60081EC85 /* RSSynergyReply.h */,
+				7446602A16C231A60081EC85 /* RSSynergyReply.m */,
 			);
 			name = public;
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 		74465F9016C22CE80081EC85 /* private */ = {
 			isa = PBXGroup;
 			children = (
+				7446602C16C235AB0081EC85 /* WebServiceHandlers */,
 				74465FBD16C22D560081EC85 /* TouchXML */,
 				74465F9116C22D210081EC85 /* Soap */,
 			);
@@ -206,6 +220,15 @@
 			);
 			name = TouchXML;
 			path = SynergyWebApp/Protocol/private/TouchXML;
+			sourceTree = "<group>";
+		};
+		7446602C16C235AB0081EC85 /* WebServiceHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				7446602D16C236330081EC85 /* RSWebServiceHandler.h */,
+				7446602E16C236330081EC85 /* RSWebServiceHandler.m */,
+			);
+			name = WebServiceHandlers;
 			sourceTree = "<group>";
 		};
 		7493D8EC16C22B0300DAE363 = {
@@ -353,6 +376,9 @@
 				74465FCF16C22D560081EC85 /* CXMLNode_PrivateExtensions.m in Sources */,
 				74465FD016C22D560081EC85 /* CXMLNode_XPathExtensions.m in Sources */,
 				7446601F16C22EEC0081EC85 /* Soap+Prefix.m in Sources */,
+				7446602816C230680081EC85 /* RSSynergyWebService.m in Sources */,
+				7446602B16C231A60081EC85 /* RSSynergyReply.m in Sources */,
+				7446602F16C236330081EC85 /* RSWebServiceHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
