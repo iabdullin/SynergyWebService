@@ -14,4 +14,6 @@
 
 @property(nonatomic, readwrite)SynergyReplyType replyType;
 
+- (id)initWithType:(SynergyReplyType)_replyType;
+
 @end

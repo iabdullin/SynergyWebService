@@ -10,7 +10,8 @@
 
 typedef enum SynergyReplyType
 {
-    UnknownReply = 0,     
+    UnknownReply = 0,
+    AddPointsReply,
     PostRegistrationReply
 
 } SynergyReplyType;

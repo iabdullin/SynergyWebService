@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "RSSynergyWebService.h"
 
 @implementation MasterViewController
 
@@ -44,6 +45,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    RSSynergyWebService *webService = [[RSSynergyWebService alloc] initWithUserName:@"user" andPassword:@"pass"];
+    [webService addPoints:@"1122" customerCardNumber:@"123456789012" numPoints:100 cardAction:CardSwiped clerkID:@"312312312" 
+    checkNumber:@"31231231" accountType:PhoneNumber surveyFlag:NO responseFormat:Xml];
 }
 
 - (void)viewDidUnload
