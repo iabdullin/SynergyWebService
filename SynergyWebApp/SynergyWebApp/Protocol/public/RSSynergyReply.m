@@ -10,11 +10,48 @@
 
 @implementation RSSynergyReply
 
-@synthesize replyType;
+@synthesize replyStatus, replyDescription;
+
+- (void)dealloc
+{
+    self.replyDescription = nil;;
+    [super dealloc];
+}
+
+- (SynergyReplyType)replyType
+{
+    return rtUnknownReply;
+}
 
 @end
 
 @implementation RSPostRegistrationReply
 
+- (SynergyReplyType)replyType
+{
+    return rtPostRegistrationReply;
+}
+
+@end
+
+@implementation RSPostRegistrationLongReply
+
+- (SynergyReplyType)replyType
+{
+    return rtPostRegistrationLongReply;
+}
+
+@end
+
+@implementation RSAddPointsReply
+
+@synthesize reward, approved, clerk, check, cardNumber, cardName, pointsAdded, totalPoints,
+            rewardBalance, totalSaved, totalVisits, giftCardBalance, rewardCashBalance, description,
+            customReceiptMessages;
+
+- (SynergyReplyType)replyType
+{
+    return rtAddPointsReply;
+}
 
 @end
