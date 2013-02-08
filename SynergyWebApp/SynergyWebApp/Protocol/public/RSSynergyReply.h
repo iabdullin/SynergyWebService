@@ -94,3 +94,83 @@ typedef enum SynergyReplyType
 @property(nonatomic, assign) NSString   *customReceiptMessages;
 
 @end
+
+@interface RSBalanceInquiryReply : RSSynergyReply
+
+@property(nonatomic, assign) NSString   *cardNumber;
+@property(nonatomic, assign) NSString   *cardName;
+@property(nonatomic, assign) NSString   *giftCardBalance;
+@property(nonatomic, assign) NSString   *pointsBalance;
+@property(nonatomic, assign) NSString   *rewardCashBalance;
+@property(nonatomic, assign) NSString   *totalVisits;
+
+@end
+
+@interface RSDeductPointsReply : RSSynergyReply
+@end
+
+@interface RSLoadActivateGiftCardReply : RSSynergyReply
+
+@property(nonatomic, assign) NSString   *approved;
+@property(nonatomic, assign) NSString   *loadAmount;
+@property(nonatomic, assign) NSString   *cardNumber;
+@property(nonatomic, assign) NSString   *clerk;
+@property(nonatomic, assign) NSString   *check;
+@property(nonatomic, assign) NSString   *description1;
+@property(nonatomic, assign) NSString   *giftCardBalance;
+@property(nonatomic, assign) NSString   *pointsBalance;
+@property(nonatomic, assign) NSString   *rewardCashBalance;
+@property(nonatomic, assign) NSString   *customReceiptMessages;
+
+@end
+
+@interface RSLoadRewardCardMoneyReply : RSSynergyReply
+
+@property(nonatomic, assign) NSString   *approved;
+@property(nonatomic, assign) NSString   *cardNumber;
+@property(nonatomic, assign) NSString   *rewardLoaded;
+@property(nonatomic, assign) NSString   *giftCardBalance;
+@property(nonatomic, assign) NSString   *pointsBalance;
+@property(nonatomic, assign) NSString   *rewardCashBalance;
+@property(nonatomic, assign) NSString   *totalVisits;
+
+@end
+
+@interface RSRedeemGiftCardOnlyReply : RSSynergyReply
+
+@property(nonatomic, assign) NSString   *gift;
+@property(nonatomic, assign) NSString   *approved;
+@property(nonatomic, assign) NSString   *cardNumber;
+@property(nonatomic, assign) NSString   *cardName;
+@property(nonatomic, assign) NSString   *clerk;
+@property(nonatomic, assign) NSString   *check;
+@property(nonatomic, assign) NSString   *saleAmount;
+@property(nonatomic, assign) NSString   *balanceUsed;
+@property(nonatomic, assign) NSString   *giftCardBalance;
+@property(nonatomic, assign) NSString   *pointsBalance;
+@property(nonatomic, assign) NSString   *rewardCashBalance;
+@property(nonatomic, assign) NSString   *customReceiptMessages;
+
+@end
+
+@interface RSRedeemGiftCardOrRewardReply : RSSynergyReply
+
+@property(nonatomic, assign) NSString   *reward;
+@property(nonatomic, assign) NSString   *approved;
+@property(nonatomic, assign) NSString   *cardNumber;
+@property(nonatomic, assign) NSString   *cardName;
+@property(nonatomic, assign) NSString   *clerk;
+@property(nonatomic, assign) NSString   *check;
+@property(nonatomic, assign) NSString   *saleAmount;
+@property(nonatomic, assign) NSString   *rewardUsed;
+@property(nonatomic, assign) NSString   *customerOwes;
+@property(nonatomic, assign) NSString   *totalPoints;
+@property(nonatomic, assign) NSString   *totalSaved;
+@property(nonatomic, assign) NSString   *giftCardBalance;
+@property(nonatomic, assign) NSString   *totalVisits;
+@property(nonatomic, assign) NSString   *rewardCashBalance;
+@property(nonatomic, assign) NSString   *rewardBalance;
+@property(nonatomic, assign) NSString   *description1;
+@property(nonatomic, assign) NSString   *customReceiptMessages;
+
+@end

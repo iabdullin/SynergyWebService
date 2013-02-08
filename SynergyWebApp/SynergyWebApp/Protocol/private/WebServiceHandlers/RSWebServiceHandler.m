@@ -14,6 +14,12 @@
 - (void)parsePostRegistration:(NSDictionary*)data;
 - (void)parsePostRegistrationLong:(NSDictionary*)data;
 - (void)parseAddPointsReply:(NSDictionary*)data;
+- (void)parseBalanceInquiryReply:(NSDictionary*)data;
+- (void)parseDeductPointsReply:(NSDictionary*)data;
+- (void)parseLoadActivateGiftCardReply:(NSDictionary*)data;
+- (void)parseLoadRewardCardMoneyReply:(NSDictionary*)data;
+- (void)parseRedeemGiftCardOnlyReply:(NSDictionary*)data;
+- (void)parseRedeemGiftCardOrRewardReply:(NSDictionary*)data;
 - (BOOL)validateResponse:(CXMLDocument*)response;
 
 @property(nonatomic, readwrite) SynergyReplyStatus responseReplyStatus;
@@ -77,6 +83,23 @@
         case rtAddPointsReply:
             [self parseAddPointsReply:value];
             break;
+        case rtBalanceInquiryReply:
+            [self parseBalanceInquiryReply:value];
+            break;
+        case rtDeductPointsReply:
+            [self parseDeductPointsReply:value];
+            break;
+        case rtLoadActivateGiftCardReply:
+            [self parseLoadActivateGiftCardReply:value];
+            break;
+        case rtLoadRewardCardMoneyReply:
+            [self parseLoadRewardCardMoneyReply:value];
+            break;
+        case rtRedeemGiftCardOnlyReply:
+            [self parseRedeemGiftCardOnlyReply:value];
+        case rtRedeemGiftCardOrRewardReply:
+            [self parseRedeemGiftCardOrRewardReply:value];
+            break;
         default:
             break;
     }
@@ -118,6 +141,8 @@
     RSPostRegistrationReply *reply = [[[RSPostRegistrationReply alloc] init] autorelease];
     reply.replyStatus = self.responseReplyStatus;
     reply.replyDescription = self.responseDescription;
+
+    replyObject = reply;
 }
 
 - (void)parsePostRegistrationLong:(NSDictionary*)data
@@ -141,6 +166,8 @@
     RSPostRegistrationLongReply *reply = [[[RSPostRegistrationLongReply alloc] init] autorelease];
     reply.replyStatus = self.responseReplyStatus;
     reply.replyDescription = self.responseDescription;
+
+    replyObject = reply;
 }
 
 - (void)parseAddPointsReply:(NSDictionary*)data
@@ -232,6 +259,384 @@
     replyObject = reply;
 }
 
+- (void)parseBalanceInquiryReply:(NSDictionary*)data
+{
+    NSString *balanceInquiryResult = [data objectForKey:@"BalanceInquiryResult"];
+    if (balanceInquiryResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:balanceInquiryResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+
+    status = RequestStatusSuccess;
+    RSBalanceInquiryReply *reply = [[[RSBalanceInquiryReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+    CXMLElement *root = [doc rootElement];
+    NSArray *childNodes = [root children];
+    for (CXMLElement *node in childNodes)
+    {
+        if ([[node name] caseInsensitiveCompare:@"CardNumber"] == NSOrderedSame)
+        {
+            reply.cardNumber = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardName"] == NSOrderedSame)
+        {
+            reply.cardName = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"GiftCardBalance"] == NSOrderedSame)
+        {
+            reply.giftCardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"PointsBalance"] == NSOrderedSame)
+        {
+            reply.pointsBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardCashBalance"] == NSOrderedSame)
+        {
+            reply.rewardCashBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"TotalVisits"] == NSOrderedSame)
+        {
+            reply.totalVisits = [node stringValue];
+        }
+    }
+
+    replyObject = reply;
+}
+
+- (void)parseDeductPointsReply:(NSDictionary*)data
+{
+    NSString *deductPointsResult = [data objectForKey:@"DeductPointsResult"];
+    if (deductPointsResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:deductPointsResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+    status = RequestStatusSuccess;
+    RSBalanceInquiryReply *reply = [[[RSBalanceInquiryReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+
+    replyObject = reply;
+}
+
+- (void)parseLoadActivateGiftCardReply:(NSDictionary *)data
+{
+    NSString *loadActivateGiftCardResult = [data objectForKey:@"LoadActivateGiftCardResult"];
+    if (loadActivateGiftCardResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:loadActivateGiftCardResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+    status = RequestStatusSuccess;
+    RSLoadActivateGiftCardReply *reply = [[[RSLoadActivateGiftCardReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+    CXMLElement *root = [doc rootElement];
+    NSArray *childNodes = [root children];
+    for (CXMLElement *node in childNodes)
+    {
+        if ([[node name] caseInsensitiveCompare:@"Approved"] == NSOrderedSame)
+        {
+            reply.approved = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"LoadAmount"] == NSOrderedSame)
+        {
+            reply.loadAmount = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardNumber"] == NSOrderedSame)
+        {
+            reply.cardNumber = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Clerk"] == NSOrderedSame)
+        {
+            reply.clerk = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Check"] == NSOrderedSame)
+        {
+            reply.check = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Description1"] == NSOrderedSame)
+        {
+            reply.description1 = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"GiftCardBalance"] == NSOrderedSame)
+        {
+            reply.giftCardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"PointsBalance"] == NSOrderedSame)
+        {
+            reply.pointsBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardCashBalance"] == NSOrderedSame)
+        {
+            reply.rewardCashBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CustomReceiptMessages"] == NSOrderedSame)
+        {
+            reply.customReceiptMessages = [node stringValue];
+        }
+    }
+    
+    replyObject = reply;
+}
+
+- (void)parseLoadRewardCardMoneyReply:(NSDictionary*)data
+{
+    NSString *loadRewardCardMoneyResult = [data objectForKey:@"LoadRewardCardMoneyResult"];
+    if (loadRewardCardMoneyResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:loadRewardCardMoneyResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+    status = RequestStatusSuccess;
+    RSLoadRewardCardMoneyReply *reply = [[[RSLoadRewardCardMoneyReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+    CXMLElement *root = [doc rootElement];
+    NSArray *childNodes = [root children];
+    for (CXMLElement *node in childNodes)
+    {
+        if ([[node name] caseInsensitiveCompare:@"Approved"] == NSOrderedSame)
+        {
+            reply.approved = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardNumber"] == NSOrderedSame)
+        {
+            reply.cardNumber = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardLoaded"] == NSOrderedSame)
+        {
+            reply.rewardLoaded = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"GiftCardBalance"] == NSOrderedSame)
+        {
+            reply.giftCardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"PointsBalance"] == NSOrderedSame)
+        {
+            reply.pointsBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardCashBalance"] == NSOrderedSame)
+        {
+            reply.rewardCashBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"TotalVisits"] == NSOrderedSame)
+        {
+            reply.totalVisits = [node stringValue];
+        }
+    }
+
+    replyObject = reply;
+}
+
+- (void)parseRedeemGiftCardOnlyReply:(NSDictionary *)data
+{
+    NSString *redeemGiftCardOnlyResult = [data objectForKey:@"RedeemGiftCardOnlyResult"];
+    if (redeemGiftCardOnlyResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:redeemGiftCardOnlyResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+    status = RequestStatusSuccess;
+    RSRedeemGiftCardOnlyReply *reply = [[[RSRedeemGiftCardOnlyReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+    CXMLElement *root = [doc rootElement];
+    NSArray *childNodes = [root children];
+    for (CXMLElement *node in childNodes)
+    {
+        if ([[node name] caseInsensitiveCompare:@"Gift"] == NSOrderedSame)
+        {
+            reply.gift = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Approved"] == NSOrderedSame)
+        {
+            reply.approved = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardNumber"] == NSOrderedSame)
+        {
+            reply.cardNumber = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardName"] == NSOrderedSame)
+        {
+            reply.cardName = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Clerk"] == NSOrderedSame)
+        {
+            reply.clerk = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Check"] == NSOrderedSame)
+        {
+            reply.check = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"SaleAmount"] == NSOrderedSame)
+        {
+            reply.saleAmount = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"BalanceUsed"] == NSOrderedSame)
+        {
+            reply.balanceUsed = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"GiftCardBalance"] == NSOrderedSame)
+        {
+            reply.giftCardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"PointsBalance"] == NSOrderedSame)
+        {
+            reply.pointsBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardCashBalance"] == NSOrderedSame)
+        {
+            reply.rewardCashBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CustomReceiptMessages"] == NSOrderedSame)
+        {
+            reply.customReceiptMessages = [node stringValue];
+        }
+    }
+
+    replyObject = reply;
+}
+
+- (void)parseRedeemGiftCardOrRewardReply:(NSDictionary *)data
+{
+    NSString *redeemGiftCardOrRewardResult = [data objectForKey:@"RedeemGiftCardOrRewardResult"];
+    if (redeemGiftCardOrRewardResult == nil)
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+	CXMLDocument* doc = [[CXMLDocument alloc] initWithXMLString:redeemGiftCardOrRewardResult options:0 error:nil];
+    if (![self validateResponse:doc])
+    {
+        status = RequestStatusInternalError;
+        return;
+    }
+    
+    status = RequestStatusSuccess;
+    RSRedeemGiftCardOrRewardReply *reply = [[[RSRedeemGiftCardOrRewardReply alloc] init] autorelease];
+    reply.replyStatus = self.responseReplyStatus;
+    reply.replyDescription = self.responseDescription;
+    CXMLElement *root = [doc rootElement];
+    NSArray *childNodes = [root children];
+    for (CXMLElement *node in childNodes)
+    {
+        if ([[node name] caseInsensitiveCompare:@"Reward"] == NSOrderedSame)
+        {
+            reply.reward = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Approved"] == NSOrderedSame)
+        {
+            reply.approved = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardNumber"] == NSOrderedSame)
+        {
+            reply.cardNumber = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CardName"] == NSOrderedSame)
+        {
+            reply.cardName = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Clerk"] == NSOrderedSame)
+        {
+            reply.clerk = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Check"] == NSOrderedSame)
+        {
+            reply.check = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"SaleAmount"] == NSOrderedSame)
+        {
+            reply.saleAmount = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardUsed"] == NSOrderedSame)
+        {
+            reply.rewardUsed = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"GiftCardBalance"] == NSOrderedSame)
+        {
+            reply.giftCardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CustomerOwes"] == NSOrderedSame)
+        {
+            reply.customerOwes = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"TotalPoints"] == NSOrderedSame)
+        {
+            reply.totalPoints = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardBalance"] == NSOrderedSame)
+        {
+            reply.rewardBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"TotalSaved"] == NSOrderedSame)
+        {
+            reply.totalSaved = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"TotalVisits"] == NSOrderedSame)
+        {
+            reply.totalVisits = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"Description"] == NSOrderedSame)
+        {
+            reply.description1 = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"RewardCashBalance"] == NSOrderedSame)
+        {
+            reply.rewardCashBalance = [node stringValue];
+        }
+        else if ([[node name] caseInsensitiveCompare:@"CustomReceiptMessages"] == NSOrderedSame)
+        {
+            reply.customReceiptMessages = [node stringValue];
+        }
+    }
+    
+    replyObject = reply;
+}
+
+#pragma mark Private
 - (BOOL)validateResponse:(CXMLDocument*)response
 {
     if(response == nil)

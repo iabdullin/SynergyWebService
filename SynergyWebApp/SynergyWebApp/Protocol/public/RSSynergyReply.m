@@ -55,3 +55,76 @@
 }
 
 @end
+
+@implementation RSBalanceInquiryReply
+
+@synthesize cardNumber, cardName, giftCardBalance, pointsBalance,
+            rewardCashBalance, totalVisits;
+
+- (SynergyReplyType)replyType
+{
+    return rtBalanceInquiryReply;
+}
+
+@end
+
+@implementation RSDeductPointsReply
+
+- (SynergyReplyType)replyType
+{
+    return rtDeductPointsReply;
+}
+
+@end
+
+@implementation RSLoadActivateGiftCardReply
+
+@synthesize approved, loadAmount, cardNumber, clerk,
+            check, description1, giftCardBalance, pointsBalance,
+            rewardCashBalance, customReceiptMessages;
+
+- (SynergyReplyType)replyType
+{
+    return rtLoadActivateGiftCardReply;
+}
+
+@end
+
+@implementation RSLoadRewardCardMoneyReply
+
+@synthesize approved, cardNumber, rewardLoaded,
+            giftCardBalance, pointsBalance, rewardCashBalance, totalVisits;
+
+- (SynergyReplyType)replyType
+{
+    return rtLoadRewardCardMoneyReply;
+}
+
+@end
+
+@implementation RSRedeemGiftCardOnlyReply : RSSynergyReply
+
+@synthesize gift, approved, cardNumber, cardName, clerk, check,
+            saleAmount, balanceUsed, giftCardBalance, pointsBalance,
+            rewardCashBalance, customReceiptMessages;
+
+- (SynergyReplyType)replyType
+{
+    return rtRedeemGiftCardOnlyReply;
+}
+
+@end
+
+@implementation RSRedeemGiftCardOrRewardReply : RSSynergyReply
+
+@synthesize reward, approved, cardNumber, cardName, clerk, check,
+            saleAmount, rewardUsed, customerOwes, totalPoints,
+            rewardBalance, totalSaved, totalVisits, giftCardBalance,
+            rewardCashBalance, description1, customReceiptMessages;
+
+- (SynergyReplyType)replyType
+{
+    return rtRedeemGiftCardOrRewardReply;
+}
+
+@end
