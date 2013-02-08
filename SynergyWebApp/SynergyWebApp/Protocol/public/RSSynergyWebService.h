@@ -206,7 +206,7 @@ typedef enum SynergyGender
                                     serverId:(NSString*)serverId primaryCardNumber:(NSString*)primaryCardNumber
                           primaryPhoneNumber:(NSString*)primaryPhoneNumber cardType:(NSString*)cardType
                             streetSavingFlag:(BOOL)streetSavingFlag anniversaryDate:(NSString*)anniversaryDate
-                              youGotCashFlag:(BOOL)youGotCashFlag cardHolderSurrogate:(NSString*)cardHolderSurrogate
+                              youGotCashFlag:(BOOL)youGotCashFlag cardHolderSurrogate:(int)cardHolderSurrogate
                             originalPassword:(NSString*)originalPassword;
 
 - (RSSynergyRequest*)updateRegistrationSpecial:(NSString*)cardNumber firstName:(NSString*)firstName
@@ -227,7 +227,7 @@ typedef enum SynergyGender
                                anniversaryDate:(NSString*)anniversaryDate youGotCashFlag:(BOOL)youGotCashFlag
                                    companyName:(NSString*)companyName uniqueId:(int)uniqueId
                                    extraFields:(NSArray*)extraFields extraValues:(NSArray*)extraValues
-                           cardHolderSurrogate:(NSString*)cardHolderSurrogate toSynergyServer:(NSString*)toSynergyServer;
+                           cardHolderSurrogate:(int)cardHolderSurrogate toSynergyServer:(NSString*)toSynergyServer;
 
 - (RSSynergyRequest*)addPoints:(NSString*)merchantRockCommID customerCardNumber:(NSString*)customerCardNumber numPoints:(int)numPoints
                     cardAction:(SynergyCardAction)cardActionc clerkID:(NSString*)clerkID checkNumber:(NSString*)checkNumber accountType:(SynergyAccountType)accountType

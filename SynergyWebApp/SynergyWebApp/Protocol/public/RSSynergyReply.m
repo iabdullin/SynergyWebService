@@ -128,3 +128,103 @@
 }
 
 @end
+
+@implementation RSVoidReply : RSSynergyReply
+
+@synthesize voidAmount, approved, cardNumber, transaction, voidedPoints, voidedAmount, giftCardBalance,
+            pointsBalance, rewardCashBalance ,totalVisits;
+
+- (SynergyReplyType)replyType
+{
+    return rtVoidReply;
+}
+
+@end
+
+@implementation RSMerchantData : NSObject
+
+@synthesize merchantId, salesPerson, businessName ,statusId, status, address,
+            locationId, zip, location, neighborhood, categoryId, categoryName,
+            foodType, categoryName2, phone, email, fax, webSite,city, dbaName, state, country,
+            welcomeCredit, localReward, touristReward, createdOn, exported, ausrId, userId, userName,
+            userPassword, userEmail, roleId, roleName, terminalType;
+@end
+
+@implementation RSGetMerchantRecordsReply : RSSynergyReply
+
+@synthesize dataStatus, merchantData;
+
+- (SynergyReplyType)replyType
+{
+    return rtGetMerchantRecordsReply;
+}
+
+@end
+
+@implementation RSMerchantLogoData : NSObject
+
+@synthesize logoId, merchantId, businessName, logoData, webSite;
+
+@end
+
+@implementation RSGetMerchantLogosReply : RSSynergyReply
+
+@synthesize dataStatus, logosData;
+
+- (SynergyReplyType)replyType
+{
+    return rtGetMerchantLogosReply;
+}
+
+@end
+
+@implementation RSProgramFAQData : NSObject
+
+@synthesize number, question, answer;
+
+@end
+
+@implementation RSGetProgramFAQToSynergyServerReply : RSSynergyReply
+
+@synthesize programName, faqData;
+
+- (SynergyReplyType)replyType
+{
+    return rtGetProgramFAQToSynergyServerReply;
+}
+
+@end
+
+@implementation RSGetTotalSavingsToSynergyServerReply : RSSynergyReply
+
+@synthesize totalSaved;
+
+- (SynergyReplyType)replyType
+{
+    return rtGetTotalSavingsToSynergyServerReply;
+}
+
+@end
+
+@implementation RSValidateCardNumberToSynergyServerReply : RSSynergyReply
+
+- (SynergyReplyType)replyType
+{
+    return rtValidateCardNumberToSynergyServerReply;
+}
+
+@end
+
+@implementation RSGetMerchantRecordsInPagesReply : RSSynergyReply
+
+@synthesize dataStatus, maxNumPages, rowNum, iD, newMexicoCardFlag, merchantData;
+
+- (SynergyReplyType)replyType
+{
+    return rtGetMerchantRecordsInPageReply;
+}
+
+@end
+
+
+

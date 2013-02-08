@@ -239,7 +239,6 @@
 		7493D8EC16C22B0300DAE363 = {
 			isa = PBXGroup;
 			children = (
-				7446602416C22F760081EC85 /* SystemConfiguration.framework */,
 				74465F8D16C22C530081EC85 /* Protocol */,
 				7493D90116C22B0300DAE363 /* SynergyWebApp */,
 				7493D8FA16C22B0300DAE363 /* Frameworks */,
@@ -258,6 +257,7 @@
 		7493D8FA16C22B0300DAE363 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7446602416C22F760081EC85 /* SystemConfiguration.framework */,
 				74465FD116C22D880081EC85 /* libxml2.2.dylib */,
 				7493D8FB16C22B0300DAE363 /* UIKit.framework */,
 				7493D8FD16C22B0300DAE363 /* Foundation.framework */,
@@ -319,7 +319,7 @@
 		7493D8EE16C22B0300DAE363 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 7493D8F116C22B0300DAE363 /* Build configuration list for PBXProject "SynergyWebApp" */;
 			compatibilityVersion = "Xcode 3.2";

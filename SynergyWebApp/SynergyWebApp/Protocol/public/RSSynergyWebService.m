@@ -730,7 +730,7 @@
                                     serverId:(NSString*)serverId primaryCardNumber:(NSString*)primaryCardNumber
                           primaryPhoneNumber:(NSString*)primaryPhoneNumber cardType:(NSString*)cardType
                             streetSavingFlag:(BOOL)streetSavingFlag anniversaryDate:(NSString*)anniversaryDate
-                              youGotCashFlag:(BOOL)youGotCashFlag cardHolderSurrogate:(NSString*)cardHolderSurrogate
+                              youGotCashFlag:(BOOL)youGotCashFlag cardHolderSurrogate:(int)cardHolderSurrogate
                             originalPassword:(NSString*)originalPassword
 {
     NSMutableArray *bodyEnvelope = [self generateRegistrationCommonData:YES cardNumber:cardNumber
@@ -789,7 +789,7 @@
                                anniversaryDate:(NSString*)anniversaryDate youGotCashFlag:(BOOL)youGotCashFlag
                                    companyName:(NSString*)companyName uniqueId:(int)uniqueId
                                    extraFields:(NSArray*)extraFields extraValues:(NSArray*)extraValues
-                           cardHolderSurrogate:(NSString*)cardHolderSurrogate toSynergyServer:(NSString*)toSynergyServer
+                           cardHolderSurrogate:(int)cardHolderSurrogate toSynergyServer:(NSString*)toSynergyServer
 {
     NSMutableArray *bodyEnvelope = [self generateRegistrationCommonData:YES cardNumber:cardNumber
                                                               firstName:firstName lastName:lastName
