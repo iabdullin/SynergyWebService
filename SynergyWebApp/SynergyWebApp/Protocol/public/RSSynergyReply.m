@@ -27,7 +27,13 @@
 
 @implementation RSPostRegistrationReply
 
+
 -(void)testFunction2
+{
+    
+}
+
+-(void)testFunction
 {
     
 }
