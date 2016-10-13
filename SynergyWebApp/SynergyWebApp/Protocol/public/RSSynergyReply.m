@@ -27,6 +27,11 @@
 
 @implementation RSPostRegistrationReply
 
+-(void)testFunction2
+{
+    
+}
+
 - (SynergyReplyType)replyType
 {
     return rtPostRegistrationReply;
